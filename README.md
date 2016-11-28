@@ -1,10 +1,14 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/contentful/contentful-java-fullstack)
+
+Contentful Java Fullstack Getting Started
+=========================================
+>>>>>>> Creating heroku button
 
 # Contentful Java Fullstack Getting Started
 
 This repository is used for showing how to use Contentful and Java Spring Boot together.
 
-## Running the app 
+## Running the app
 
 An easy way to deploy this application is using Heroku.
 
