@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/contentful/contentful-java-fullstack)
+
 Contentful Java Fullstack Getting Started
 =========================================
 

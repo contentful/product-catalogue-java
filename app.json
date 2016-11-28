@@ -1,0 +1,8 @@
+{
+  "name": "Contentful Java Fullstack",
+  "description": "Get started using Contentful and Spring Boot Java.",
+  "repository": "https://github.com/contentful/contentful-java-fullstack",
+  "website": "https://contentful.com",
+  "logo": "https://raw.githubusercontent.com/contentful/contentful-java-fullstack/master/assets/contentful-logo-c-only.png",
+  "keywords": ["java", "spring", "spring boot", "contentful", "getting started", "guide"]
+}
