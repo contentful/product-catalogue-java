@@ -1,0 +1,74 @@
+{{> header.template.html}}
+<div id="content" class="content-container">
+    <div class="categories">
+        <ul class="categories-list">
+            <li>
+                <a href="/categories">All</a>
+            </li>
+            {{#categories.items}}
+            <li>
+                <img src="{{fields.icon.en-US.url}}"
+                     width="20"
+                     height="20"
+                     alt="{{fields.categoryDescription.en-US}}"
+                     title="{{fields.categoryDescription.en-US}}"/>
+                <a href="/categories/{{attrs.id}}" data-nav="data-nav">
+                    {{fields.title.en-US}}
+                </a>
+            </li>
+            {{/categories.items}}
+        </ul>
+        <div class="products">
+            {{#products.items}}
+            <div class="product-in-list">
+                {{#fields}}
+                <div class="product-image">
+                    <a href="/products/{{attrs.id}}"
+                       data-nav="data-nav">
+                        {{#image.en-US}}
+                        <img src="{{url}}?w=150"
+                             alt="{{title}}"
+                             width="150"/>
+                        {{/image.en-US}}
+                    </a>
+                </div>
+
+                <div class="product-details">
+                    <div class="product-header">
+                        <h2>
+                            <a href="/products/{{attrs.id}}"
+                               data-nav="data-nav">
+                                {{productName.en-US}}
+                            </a>
+                        </h2>
+                        <span>by</span>
+                        <a href="/brands/{{fields.brand.en-US.attrs.id}}"
+                           data-env="data-env">
+                            {{fields.brand.en-US.fields.companyName.en-US}}
+                        </a>
+                    </div>
+                    <p class="product-categories">
+                        {{#categories.en-US}}
+                        {{fields.title.en-US}}
+                        {{/categories.en-US}}
+                    </p>
+                    <p>{{productDescription.en-US}}</p>
+                    <p>{{price.en-US}} &euro;</p>
+                    <p class="product-tags">
+                        <span>Tags</span>
+                    <ul class="tags">
+                        {{#tags.en-US}}
+                        <li class="tag">
+                            {{.}}
+                        </li>
+                        {{/tags.en-US}}
+                    </ul>
+                    </p>
+                </div>
+                {{/fields}}
+            </div>
+            {{/products.items}}
+        </div>
+    </div>
+</div>
+{{>footer.template.html}}

@@ -1,0 +1,61 @@
+{{> header.template.html}}
+<div id="content" class="content-container">
+    <h1>Products</h1>
+    <div class="products">
+        {{#product}}
+        <div class="single-product">
+            {{#fields}}
+            <div class="product-image">
+                <a href="/products/{{attrs.id}}"
+                   data-nav="data-nav">
+                    {{#image.en-US}}
+                    <img src="{{url}}?w=300"
+                         alt="{{title}}"
+                         width="300"/>
+                    {{/image.en-US}}
+                </a>
+            </div>
+
+            <div class="product-details">
+                <div class="product-header">
+                    <h2>
+                        <a href="/products/{{attrs.id}}"
+                           data-nav="data-nav">
+                            {{productName.en-US}}
+                        </a>
+                    </h2>
+                    <span>by</span>
+                    <a href="/brands/{{fields.brand.en-US.attrs.id}}"
+                       data-env="data-env">
+                        {{fields.brand.en-US.fields.companyName.en-US}}
+                    </a>
+                </div>
+                <p class="product-categories">
+                    {{#categories.en-US}}
+                    {{fields.title.en-US}}
+                    {{/categories.en-US}}
+                </p>
+                <p>{{productDescription.en-US}}</p>
+                <p>{{price.en-US}} &euro;</p>
+                <p>{{sku.en-US}}</p>
+                <p><a href="{{website.en-US}}">{{website.en-US}}</a></p>
+                <p class="product-tags">
+                    <span>Tags:</span>
+                <ul class="tags">
+                    {{#tags.en-US}}
+                    <li class="tag">
+                        {{.}}
+                    </li>
+                    {{/tags.en-US}}
+                </ul>
+                </p>
+            </div>
+            {{/fields}}
+            {{^fields}}
+            <h1>No product found ...</h1>
+            {{/fields}}
+        </div>
+        {{/product}}
+    </div>
+</div>
+{{>footer.template.html}}

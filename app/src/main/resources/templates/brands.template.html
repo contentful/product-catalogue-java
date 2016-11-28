@@ -1,0 +1,40 @@
+{{> header.template.html}}
+<div id="content" class="content-container">
+    <h1>Brands</h1>
+    <div class="products">
+        {{#brands.items}}
+        <div class="product-in-list">
+            {{#fields}}
+            <div class="product-image">
+                <a href="/brands/{{attrs.id}}"
+                   data-nav="data-nav">
+                    {{#logo.en-US}}
+                    <img src="{{url}}?w=150"
+                         alt="{{title}}"
+                         width="150"/>
+                    {{/logo.en-US}}
+                </a>
+            </div>
+
+            <div class="product-details">
+                <div class="product-header">
+                    <h2>
+                        <a href="/brands/{{attrs.id}}"
+                           data-nav="data-nav">
+                            {{companyName.en-US}}
+                        </a>
+                    </h2>
+                </div>
+                <p>{{companyDescription.en-US}}</p>
+                <p><a href="mailto:{{website.en-US}}">{{website.en-US}}</a></p>
+                <p><a href="mailto:{{email.en-US}}">{{email.en-US}}</a></p>
+                {{#phone.en-US}}
+                <p><a href="mailto:{{.}}">{{.}}</a></p>
+                {{/phone.en-US}}
+            </div>
+            {{/fields}}
+        </div>
+        {{/brands.items}}
+    </div>
+</div>
+{{>footer.template.html}}

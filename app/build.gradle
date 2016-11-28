@@ -1,0 +1,24 @@
+apply plugin: 'application'
+mainClassName = 'com.contentful.java.starter.Main'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+jar {
+    manifest {
+        attributes('provider': 'gradle', 'Main-Class': 'com.contentful.java.starter.Main')
+    }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.2.RELEASE")
+    compile("com.contentful.java:java-sdk:7.2.0")
+    compile("com.github.mjeanroy:springmvc-mustache:0.5.3")
+    compile("com.github.spullara.mustache.java:compiler:0.9.4")
+}
+
+springBoot {
+    mainClass = mainClassName
+}
+
+build.dependsOn(installDist)
