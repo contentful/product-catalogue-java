@@ -14,7 +14,7 @@ An easy way to deploy this application is using Heroku (Click image to enlarge)
 
 
 1. Click this heroku button: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy).
-1. [sign up](https://id.heroku.com/signup/www-header) to heroku
+1. [Ssign up](https://id.heroku.com/signup/www-header) to heroku
 1. Give the app a nice name, or decide not to, and take a predifined one.
 1. Watch the app depoy.
 1. Open the just deployed app.
