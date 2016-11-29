@@ -32,8 +32,8 @@ To get started with your website running Java with Spring Boot, download the Pro
 To download the source from heroku you need the [heroku command line, or heroku toolbelt](https://devcenter.heroku.com/articles/heroku-command-line) and the following two commands to download your source:
 
 ```shell
-$ heroku login # login to you heroku account
-$ heroku git:clone ${FOLDER} -a ${MY_CONTENTFUL_APP} # clone the app from heroku to your local filesystem
+ heroku login # login to you heroku account
+ heroku git:clone ${FOLDER} -a ${MY_CONTENTFUL_APP} # clone the app from heroku to your local filesystem
 ```
 
 ### Cloning from github or downloading the zip
@@ -41,7 +41,7 @@ $ heroku git:clone ${FOLDER} -a ${MY_CONTENTFUL_APP} # clone the app from heroku
 With git installed, please use the following command line to clone this repository:
 
 ```shell
-$ git clone git@github.com:contentful/contentful-java-fullstack.git
+ git clone git@github.com:contentful/contentful-java-fullstack.git
 ```
 
 Lastly you could also download the source via a [zip file from github](https://github.com/contentful/contentful-java-fullstack/archive/master.zip).
@@ -51,18 +51,18 @@ Lastly you could also download the source via a [zip file from github](https://g
 Once you got the source downloaded some way, please feel free to run it locally:
 
 ```shell
-$ ./gradlew run
+ ./gradlew run
 ```
 
 This will install all dependencies and run a local tomcat server at address 8080, serving the content. To see the content in your browser open this url after starting the server [http://localhost:8080](http://localhost:8080), by either clicking the link, or typing either
 
 ```shell
-$ xdg-open https://localhost:8080
+ xdg-open https://localhost:8080
 ```
 on Linux, or
 
 ```shell
-$ open https://localhost:8080
+ open https://localhost:8080
 ```
 
 on Mac.
@@ -110,9 +110,9 @@ Now that you have verified that the webserver runs the way it should locally, it
 Perfect, you simply run
 
 ```shell
-$ git add .
-$ git commit -m 'Changed credentials to mine'
-$ git push heroku master
+ git add .
+ git commit -m 'Changed credentials to mine'
+ git push heroku master
 ```
 
 to upload the changes to heroku. Now heroku will build and run the new sample. Once the command returns, continue with [opening it remotely](#opening-the-remote-app).
@@ -122,38 +122,38 @@ to upload the changes to heroku. Now heroku will build and run the new sample. O
 You need to create a new heroku app and add the changes to it's git.
 
 ```shell
-$ heroku create
+ heroku create
 ```
 
 Creates a new app on heroku. Please look in the output for the name of your newly created app, it will look something like:
 
 ```shell
-$ heroku create
-$ Creating app... done, ⬢ warm-beyond-45568
-$ https://warm-beyond-45568.herokuapp.com/ | https://git.heroku.com/warm-beyond-45568.git
+ heroku create
+ Creating app... done, ⬢ warm-beyond-45568
+ https://warm-beyond-45568.herokuapp.com/ | https://git.heroku.com/warm-beyond-45568.git
 ```
 
 In this case, the new app is called `warm-beyond-45568`. If you downloaded this app as a zip file, please also create a git repository: (Please ignore this step if you clone the github repository):
 
 ```shell
-$ git init . # only when downloaded as a zip
+ git init . # only when downloaded as a zip
 ```
 To now commit your changes to be uploaded to heroku, please use these commands:
 
 ```shell
-$ git add .
-$ git commit -m 'Changed credentials to mine'
+ git add .
+ git commit -m 'Changed credentials to mine'
 ```
 
 Now that we have a git repository with our new changes, either by cloining it, or creating a complete new one, we can create the remote (the deploy target):
 
 ```shell
-$ heroku git:remote --app warm-beyond-45568 #remember that `warm-beyond-45568` is the name of your app...
+ heroku git:remote --app warm-beyond-45568 #remember that `warm-beyond-45568` is the name of your app...
 ```
 
 Once this is done, you can now instruct git to deploy the code to heroku, build it an run it remotely:
 ```shell
-$ git push heroku master
+ git push heroku master
 ```
 
 This will upload your changes, and with the last step you can finally see it running your content on a remote heroku machine:
@@ -161,7 +161,7 @@ This will upload your changes, and with the last step you can finally see it run
 ## Opening the Remote App
 
 ```shell
-$ heroku open
+ heroku open
 ```
 
 ## Deployed successfully
