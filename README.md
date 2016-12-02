@@ -6,6 +6,12 @@
 
 This repository shows you how to use Contentful and Java Spring Boot together.
 
+## Structure of the example
+
+The page created contains products with a title, image, category, description, brand and tags. In Contentful, this is called a 'content type', and each content type is part of a space's 'content model' that allows you to relate resources for one project together. [Read more about our content model](https://www.contentful.com/developers/docs/concepts/data-model/).
+
+We developed this example using the content model that comes pre-loaded in our "Product Catalogue" space template. Next you'll create your own space and replace the content of our example with your entries, so you can edit them and understand how Contentful works with your content.
+
 ## Running the app
 
 You can deploy the app using Heroku to see how it works and experiment.
@@ -46,12 +52,6 @@ Once you have the source code, run it locally with the following command:
 This will install all dependencies and run a local tomcat server on port `8080`, which you can open in your browser at _http://localhost:8080_.
 
 You should see an HTML page loaded with products from our example space. You can click on them to see more details.
-
-## Structure of the example
-
-The page contains products with a title, image, category, description, brand and tags. In Contentful, this is called a 'content type', and each content type is part of a space's 'content model' that allows you to relate resources for one project together. [Read more about our content model](https://www.contentful.com/developers/docs/concepts/data-model/).
-
-We developed this example using the content model that comes pre-loaded in our "Product Catalogue" space template. Next you'll create your own space and replace the content of our example with your entries, so you can edit them and understand how Contentful works with your content.
 
 ## Create a Space
 
