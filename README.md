@@ -35,16 +35,6 @@ heroku login # login to you heroku account
 heroku git:clone ./ -a <contentful_app_id> # clone the app from heroku to your local filesystem
 ```
 
-### Cloning from GitHub or downloading the zip
-
-Use the following command to clone this repository:
-
-```bash
-git clone git@github.com:contentful/contentful-java-fullstack.git
-```
-
-Or you can download the code as a [zip file from GitHub](https://github.com/contentful/contentful-java-fullstack/archive/master.zip).
-
 ### Run it locally
 
 Once you have the source code, run it locally with the following command:
@@ -76,55 +66,14 @@ Hit _refresh_ in your browser and you\'re done! You\'re now running the applicat
 
 ## Update your Heroku app
 
-Now that you have verified that the webserver runs the way it should To upload your app to Heroku you will need the [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-command-line) and depending on how you downloaded the source code, you will need to follow different steps.
-
-### Cloned from Heroku
-
-Run the following commands to upload to Heroku:
+Now that you have verified that the webserver runs the way it should To upload your app to Heroku you will need the [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-command-line) and run the following commands to upload to Heroku:
 
 ```bash
 git add . git commit -m 'Changed credentials'
 git push heroku master
 ```
 
-Now heroku will build and run the new sample. Once the command completes, continue with [opening it remotely](#opening-the-remote-app).
-
-### Cloned from Github or downloaded as a ZIP archive
-
-You need to create a new heroku app and add the changes to it's git repository:
-
-```bash
-heroku create
-```
-
-Watch the output for the name of your newly created app, it will look something like _https://warm-beyond-45568.herokuapp.com_ and _https://git.heroku.com/warm-beyond-45568.git_ for the git repository. In this case, the new app is called `warm-beyond-45568`.
-
-If you downloaded this app as a zip file, you will also need to create a git repository (ignore this step if you cloned the GitHub repository):
-
-```bash
-git init . # only when downloaded as a zip
-```
-
-To commit your changes to heroku, use these commands:
-
-```bash
-git add .
-git commit -m 'Changed credentials'
-```
-
-Now you have a git repository with your new changes and you can create the remote deploy target:
-
-```bash
-heroku git:remote --app warm-beyond-45568 # Replace with the name of your app
-```
-
-When this is complete, you can deploy the code to heroku, build and run it remotely:
-
-```bash
-git push heroku master
-```
-
-Now you see the app running your content on a remote heroku machine:
+To see your app running your content on a remote heroku machine, do the following:
 
 ```bash
 heroku open
