@@ -30,7 +30,7 @@ This app uses our Product Catalogue example, which you can use to power your own
 
 ### Download the example
 
-To run the app locally you will need the source code, which you can get the source code for this app by cloning this repository or from Heroku.
+To run the app locally you will need the source code, which you can by cloning this repository from Heroku.
 
 ### Cloning from heroku
 
@@ -49,7 +49,7 @@ Once you have the source code, run it locally with the following command:
 ./gradlew run
 ```
 
-This will install all dependencies and run a local tomcat server on port `8080`, which you can open in your browser at _http://localhost:8080_.
+This will install all dependencies and run a local tomcat server on port `8080`, which you can open in your browser at _[http://localhost:8080](http://localhost:8080)_.
 
 You should see an HTML page loaded with products from our example space. You can click on them to see more details.
 
