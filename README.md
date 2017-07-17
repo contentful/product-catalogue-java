@@ -66,7 +66,7 @@ Hit _refresh_ in your browser and you\'re done! You\'re now running the applicat
 
 ## Update your Heroku app
 
-Now that you have verified that the webserver runs the way it should To upload your app to Heroku you will need the [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-command-line) and run the following commands to upload to Heroku:
+Now that you have verified that the webserver runs the way it should, you can update it online. To upload your app to Heroku you will need the [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-command-line) and run the following commands to upload to Heroku:
 
 ```bash
 git add . git commit -m 'Changed credentials'
